@@ -9,15 +9,23 @@
 </head>
 
 <body id="top">
-    <header class="app__header wrapper">
-        <h1>Listado de paises con Javascript y el API fetch</h1>
+    <header class="app__header">
+        <div class="app__header-title">
+            <h1>Where in the world?</h1>
+            <div class="app__theme">
+                <div class="moon">
+                    <img src="./images/moon.svg" class="moon__icon" />
+                </div>
+                <img src="./images/sun.svg" class="sun" />
+            </div>
+        </div>
     </header>
 
     <section class="app__filters wrapper">
-        <input type="search" class="app__search" placeholder="Buscar por nombre de país o su capital..." />
+        <input type="search" class="app__search" placeholder="search for a country..." />
 
         <select class="app__filter">
-            <option value="">Filtrar por región</option>
+            <option value="">Filter by region</option>
             <option value="africa">Africa</option>
             <option value="americas">Americas</option>
             <option value="asia">Asia</option>

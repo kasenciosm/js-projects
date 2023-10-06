@@ -45,6 +45,11 @@ document.addEventListener('scroll', () => {
 })
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const iconTheme = document.querySelector('.app__theme')
+    iconTheme.onclick = function (event) {
+        document.body.classList.toggle("dark-theme")
+    }
+
     const data = await fetchCountries()
     countryData = data
     renderCountries(data)
@@ -73,11 +78,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             dialogBody.innerHTML = `
                 <img src="${svg}" width="400" heigth="200"/>
-                <h2>${official}</h2>
-                <p><strong>Language(s): </strong> ${parsedLanguages}</p>
-                <p><strong>Capital: </strong> ${capital}</p>
-                <p><strong>Currencies: </strong>${parsedCurrencies}</p>
-                <p><strong>Timezone(s): </strong>${timezones}</p>
+                <h2 class="country__name">${official}</h2>
+                <p class="country__description"><strong>Language(s): </strong> ${parsedLanguages}</p>
+                <p class="country__description"><strong>Capital: </strong> ${capital}</p>
+                <p class="country__description"><strong>Currencies: </strong>${parsedCurrencies}</p>
+                <p class="country__description"><strong>Timezone(s): </strong>${timezones}</p>
             
             `
 
